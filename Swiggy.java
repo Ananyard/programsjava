@@ -7,48 +7,58 @@ class Swiggy {
     static String paymentOption;
 
     public static boolean createAccount(String n, String e, long p, String addr, String food, String pay) {
-        boolean isValid = true;
+        boolean isValid = false;
+        boolean nameValid = false;
+        boolean emailValid = false;
+        boolean phoneValid = false;
+        boolean addressValid = false;
+        boolean foodValid = false;
+        boolean paymentValid = false;
 
         if (n != null) {
             name = n;
+            nameValid = true;
         } else {
             System.out.println("Name invalid");
-            isValid = false;
         }
 
         if (e != null) {
             email = e;
+            emailValid = true;
         } else {
             System.out.println("Email invalid");
-            isValid = false;
         }
 
         if (p > 0) {
             phone = p;
+            phoneValid = true;
         } else {
             System.out.println("Phone invalid");
-            isValid = false;
         }
 
         if (addr != null) {
             address = addr;
+            addressValid = true;
         } else {
             System.out.println("Address invalid");
-            isValid = false;
         }
 
         if (food != null) {
             foodPreference = food;
+            foodValid = true;
         } else {
             System.out.println("Food preference invalid");
-            isValid = false;
         }
 
         if (pay != null) {
             paymentOption = pay;
+            paymentValid = true;
         } else {
             System.out.println("Payment option invalid");
-            isValid = false;
+        }
+
+        if (nameValid && emailValid && phoneValid && addressValid && foodValid && paymentValid) {
+            isValid = true;
         }
 
         return isValid;
