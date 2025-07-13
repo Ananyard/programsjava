@@ -7,48 +7,58 @@ class Uber {
     static String location;
 
     public static boolean createAccount(String n, String e, long p, String pay, String car, String loc) {
-        boolean isValid = true;
+        boolean isValid = false;
+        boolean nameValid = false;
+        boolean emailValid = false;
+        boolean phoneValid = false;
+        boolean payValid = false;
+        boolean carValid = false;
+        boolean locValid = false;
 
         if (n != null) {
             name = n;
+            nameValid = true;
         } else {
             System.out.println("Name invalid");
-            isValid = false;
         }
 
         if (e != null) {
             email = e;
+            emailValid = true;
         } else {
             System.out.println("Email invalid");
-            isValid = false;
         }
 
         if (p > 0) {
             phone = p;
+            phoneValid = true;
         } else {
             System.out.println("Phone invalid");
-            isValid = false;
         }
 
         if (pay != null) {
             paymentMethod = pay;
+            payValid = true;
         } else {
             System.out.println("Payment method invalid");
-            isValid = false;
         }
 
         if (car != null) {
             preferredCarType = car;
+            carValid = true;
         } else {
             System.out.println("Car type invalid");
-            isValid = false;
         }
 
         if (loc != null) {
             location = loc;
+            locValid = true;
         } else {
             System.out.println("Location invalid");
-            isValid = false;
+        }
+
+        if (nameValid && emailValid && phoneValid && payValid && carValid && locValid) {
+            isValid = true;
         }
 
         return isValid;
