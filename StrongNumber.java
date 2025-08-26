@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class StrongNumber {
     public static int factorial(int n) {
         int fact = 1;
