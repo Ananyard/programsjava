@@ -1,3 +1,5 @@
+
+import java.util.Scanner;
 public class GCDLCM {
     public static int gcd(int a, int b) {
         while (b != 0) {
