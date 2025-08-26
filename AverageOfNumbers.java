@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class AverageOfNumbers {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
